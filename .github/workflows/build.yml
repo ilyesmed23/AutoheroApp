@@ -33,7 +33,7 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build APK (Mode Simple)
+    - name: Build APK
       run: |
         flet build apk --verbose
 
@@ -41,4 +41,4 @@ jobs:
       uses: actions/upload-artifact@v4
       with:
         name: autohero-apk
-        path: build/app/outputs/flutter-apk/app-release.apk
+        path: "**/*.apk"
