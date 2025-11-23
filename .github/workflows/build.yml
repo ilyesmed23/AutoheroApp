@@ -33,9 +33,9 @@ jobs:
         distribution: 'temurin'
         java-version: '17'
 
-    - name: Build APK
+    - name: Build APK (Mode Simple)
       run: |
-        flet build apk --project-name "AutoheroScan" --org "com.ilyes.autohero" --product-name "Autohero Scraper" --verbose
+        flet build apk --verbose
 
     - name: Upload APK
       uses: actions/upload-artifact@v4
